@@ -1,0 +1,43 @@
+
+<h2 mat-dialog-title>Add a task</h2>
+  <mat-dialog-content [formGroup]="form" >
+    <mat-form-field>
+      <input matInput  formControlName="task" #task autocomplete="off"/>
+      <mat-placeholder>Enter your task</mat-placeholder>
+      <mat-hint *ngIf="task.value?.length!<=20" >Char Count: {{task.value?.length}}/20</mat-hint>
+      <mat-hint *ngIf="task.value?.length!>20"  style="color: red;"> Char Count: {{task.value?.length}}/20 *exceeded 20 char!</mat-hint>
+    </mat-form-field><br>
+    <div>
+      <label fxLayoutAlign="center" >Priority</label>
+
+        <mat-radio-group fxLayoutAlign="center" fxLayout="row" fxLayoutGap="2vw"
+          aria-label="Select an option"
+          formControlName="priority">
+            <mat-radio-button *ngFor="let p of priorities" value="{{p}}">{{p}}</mat-radio-button>
+        </mat-radio-group>
+        <mat-hint fxLayoutAlign="center" *ngIf="form.get('priority')?.invalid" style="color:red">*Select a priority</mat-hint>
+
+      </div>
+      <mat-form-field>
+        <input
+          matInput
+          [matDatepicker]="picker"
+          formControlName="dueDate"
+          [min]="tomorrow"
+          readonly="readonly"
+          (click)="picker.open()"
+          /><mat-placeholder>Select your due date</mat-placeholder>
+          <mat-hint >Select using calendar</mat-hint>
+          <mat-datepicker-toggle id="picker"
+            matSuffix
+            [for]="picker"
+          >
+            <mat-datepicker #picker >
+            </mat-datepicker>
+          </mat-datepicker-toggle>
+      </mat-form-field>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button class="mat-raised-button" matDialogClose >Close</button>
+    <button class="mat-raised-button" (click)="save()" [disabled]=form.invalid>Add</button>
+  </mat-dialog-actions>

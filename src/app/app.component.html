@@ -1,0 +1,67 @@
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row fxLayoutAlign="center">
+    <span >Time Keeper</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="content">
+  <div >
+    <div id="myTodoList">
+      <mat-card >
+        <mat-card-header fxLayoutAlign="center"><mat-card-title >~</mat-card-title></mat-card-header>
+        <mat-card-content fxLayoutAlign="center">
+            <div fxLayout="row wrap"  fxLayoutGap="2vw grid" fxLayoutAlign="center" >
+              <div *ngFor="let t of todoMap |keyvalue" fxflex="25%" fxFlex.xs="40%" fxFlex.sm="33%" >
+                  <div fxLayoutalign="center" >
+                    <mat-card (click)="popup=!popup" class="indiv">
+                      <mat-card-title fxLayoutAlign="center" >
+                        {{t.value.task}}
+                      </mat-card-title>
+
+                      <mat-card-content fxLayoutGap="3vw" fxLayout="column">
+                        <div>
+                          <div>
+                            Due on: {{t.value.dueDate|date:" dd/MM/YYYY"}}
+                          </div>
+                          <div ><p>{{t.value.priority}} priority</p></div>
+                        </div>
+
+
+                      </mat-card-content>
+                      <mat-card-footer fxLayout="row" fxLayoutAlign="center" fxLayoutGap="20%" fxflex>
+
+                        <div >
+                          <button mat-icon-button type="button" (click)="editTaskNow(t.key)" > <mat-icon >edit</mat-icon></button>
+                        </div>
+                          <div>
+                          <button mat-icon-button type="button" (click)="removeTodo(t.key)" ><mat-icon color="warn">delete</mat-icon></button>
+                        </div>
+                      </mat-card-footer>
+                    </mat-card>
+                </div>
+              </div>
+              <div>
+                <mat-card class="indiv">
+                  <mat-card-title fxLayoutAlign="center">
+                    Add New Task
+                  </mat-card-title>
+                  <mat-card-content fxLayoutAlign="center" style="font-size: x-large;">
+                    <button mat-icon-button type="button" (click)="openDialog()"> <mat-icon>add</mat-icon> </button>
+                  </mat-card-content>
+
+                    <mat-card-footer fxLayoutAlign="center" >
+                      ~
+                    </mat-card-footer>
+
+
+                </mat-card>
+              </div>
+            </div>
+        </mat-card-content>
+
+      </mat-card>
+    </div>
+  </div>
+</div>
+

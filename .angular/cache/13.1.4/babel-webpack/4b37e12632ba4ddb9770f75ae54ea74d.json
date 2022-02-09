@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Todo {\n  constructor(task, priority, dueDate, taskID, status) {\n    this.task = task;\n    this.priority = priority;\n    this.dueDate = dueDate;\n    this.taskID = taskID;\n    this.status = status;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

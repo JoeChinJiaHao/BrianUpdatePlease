@@ -1,0 +1,25 @@
+div#todoEntry{
+  display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* border: 3px solid black; */
+    /* justify-content: space-between; */
+}
+div#myTodoList{
+  height: 100%;
+  /* border: 3px solid black; */
+  flex-direction: column;
+  /* justify-content: space-between; */
+}
+
+
+.mat-card{
+  background-color: rgb(180, 174, 224);
+}
+.indiv{
+
+  background-color:rgba(149, 65, 197, 0.5);
+}
+
+
+

@@ -1,0 +1,81 @@
+{
+  "configVersion": 1,
+  "timestamp": 1643362909320,
+  "index": "/TodoV2/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/TodoV2/favicon.ico",
+        "/TodoV2/index.html",
+        "/TodoV2/main.278a01268a892aea.js",
+        "/TodoV2/manifest.webmanifest",
+        "/TodoV2/polyfills.ef486b9970da99eb.js",
+        "/TodoV2/runtime.3cb4da63b27af4b5.js",
+        "/TodoV2/styles.3f0597960bc2e56d.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/TodoV2/assets/icons/icon-128x128.png",
+        "/TodoV2/assets/icons/icon-144x144.png",
+        "/TodoV2/assets/icons/icon-152x152.png",
+        "/TodoV2/assets/icons/icon-192x192.png",
+        "/TodoV2/assets/icons/icon-384x384.png",
+        "/TodoV2/assets/icons/icon-512x512.png",
+        "/TodoV2/assets/icons/icon-72x72.png",
+        "/TodoV2/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/TodoV2/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/TodoV2/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/TodoV2/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/TodoV2/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/TodoV2/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/TodoV2/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/TodoV2/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/TodoV2/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/TodoV2/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/TodoV2/index.html": "2f2687d5b73253a88b0930a9e6eb5c3310a6ede8",
+    "/TodoV2/main.278a01268a892aea.js": "acb15aff62e3cca2a4de2968a46757f88d2a07e9",
+    "/TodoV2/manifest.webmanifest": "72875a042c2ac7314f93a7b5243fc48505d9a0d0",
+    "/TodoV2/polyfills.ef486b9970da99eb.js": "078216bf9d5fb9774ab8749bb57ea03bdd15ceff",
+    "/TodoV2/runtime.3cb4da63b27af4b5.js": "94002be6e35dc3dcffadd8b7aa8e8c3ec3dcb6ba",
+    "/TodoV2/styles.3f0597960bc2e56d.css": "ccd46f3803aca4e1f8db6d2bef3773d8e18f25f8"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
